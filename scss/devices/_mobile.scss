@@ -2,346 +2,315 @@
 
     nav {
         padding-top: 10%;
-        padding-bottom: 10%;
-
+        padding-bottom: 15%;
         > section {
-            padding-top: 1%;
-            padding-bottom: 1%;
-            height: 5vh;
-            border-top: 1px solid $defaultGray;
-            border-bottom: 1px solid $defaultGray;
+           background-color: white;
+           width: 100%;
+           padding-top: 1%;
+           padding-bottom: 1%;
+           height: 5vh;
+           border-top: 1px solid $defaultGray;
+           border-bottom: 1px solid $defaultGray;
+           display: flex;
+           align-items: center;
+           justify-items: center;
+           position: fixed;
+           z-index: 6;
         }
-
         > article {
-            display: flex;
-            column-gap: 5vh;
-            justify-content: center;
-            align-items: center;
+           display: flex;
+           column-gap: 5vh;
+           justify-content: center;
+           align-items: center;
         }
-
         ul {
-            display: none;
+           display: none;
         }
-
         i {
-            font-size: $iconSizeMob;
+           font-size: $iconSizeMob;
         }
-
         h1 {
-            text-transform: uppercase;
-            width: 40%;
-            font-weight: 300;
-            font-size: 50px;
+           text-transform: uppercase;
+           width: 40%;
+           font-weight: 300;
+           font-size: 50px;
         }
-    }
-
-    header {
+     }
+     
+     details {
+        width: 100%;
+        text-align: center;
+        position: relative;
+        > ul {
+           width: 100%;
+           @include flexColumn;
+           position: absolute;
+           background-color: white;
+           z-index: 5;
+        }
+        li {
+           display: flex;
+           width: 100%;
+        }
+        a {
+           text-decoration: none;
+           color: $defaultColor;
+           width: 100%;
+           padding: 2%;
+           text-align: center;
+        }
+     }
+     summary {
+        font-size: 24px;
+     }
+     header {
         position: relative;
         height: 50vh;
-
         article {
-            width: 100%;
-            height: 100%;
-            background-color: rgba(50, 50, 50, .4);
-            @include flexColumn;
-            align-items: center;
-            justify-content: center;
-            position: absolute;
-            row-gap: 4vh;
-
-            > aside {
-                @include flexColumn;
-                color: white;
-                text-align: center;
-                align-items: center;
-                row-gap: 2vh;
-            }
+           width: 100%;
+           height: 100%;
+           background-color: rgba(50,50,50,.4);
+           @include flexColumn;
+           align-items: center;
+           justify-content: center;
+           position: absolute;
+           row-gap: 4vh;
+           > aside {
+              @include flexColumn;
+              color: white;
+              text-align: center;
+              align-items: center;
+              row-gap: 2vh;
+           }
         }
-
         p {
-            font-size: 14px;
+           font-size: 14px;
         }
-
         h1 {
-            text-transform: capitalize;
-            color: white;
-            font-weight: 300;
-            font-size: 50px;
+           text-transform: capitalize;
+           color: white;
+           font-weight: 300;
+           font-size: 50px;
         }
-    }
-
-    video {
-        object-fit: cover;
-        object-position: center;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-    }
-
-    .features {
+     }
+     
+     input, textarea {
+        border: 1px solid $defaultGray;
+        padding: 3%;
+     }
+     textarea {
+        resize: none;
+        height: 30vh;
+     }
+     [type="submit"] {
+        font-weight: 400;
+        width: 40%;
+        padding: 2%;
+        background-color: white;
+        font-size: 24px;
+        color: $defaultColor;
+     }
+     .features {
         color: $defaultColor;
         padding: 5%;
-        row-gap: 5vh;
         padding-top: 5vh;
         padding-bottom: 5vh;
-
+        row-gap: 5vh;
         > section {
-            @include flexColumn;
-            row-gap: 4vh;
+           @include flexColumn;
+           row-gap: 4vh;
         }
-
         article {
-            @include flexElement(row, 3vh, 0);
+           @include flexElement(row,3vh,0);
         }
-
         aside {
-            @include flexElement(column,0,3vh);
+           @include flexElement(column,0,3vh);
         }
-
         h3 {
-            font-size: 28px;
+           font-size: 28px;
         }
-
         i {
-            font-weight: 700;
-            font-size: 76px;
+           font-weight: 700;
+           font-size: 76px;
         }
-    }
-
-    .activities {
-        @include flexContent(column, center, center, 0, 5vh);
-    
+     }
+     .activities {
+        @include flexContent(column,center,center,0,7vh);
         > article {
-            height: 20vh;
-            width: 90%;
-            @include bgImage("/img/pic5.jpg");
+           height: 20vh;
+           width: 90%;
+           @include bgImage("/img/pic-04.jpg");
         }
-
-        aside {
-            width: 100%;
-            height: 100%;
-            @include flexText;
-            color: white;
-            background-color: rgba(30, 30, 30, .8);
-        }
-
-        > section {
-            width: 90%;
-            @include flexContent(column, center, center, 0, 3vh);
-        }
-
         h2 {
-            font-size: $defaultH2SizeMob;
+           font-size: $defaultH2SizeMob;
         }
-
+        aside {
+           width: 100%;
+           height: 100%;
+           @include flexText;
+           color: white;
+           background-color: rgba(30,30,30,.8);
+        }
+        > section {
+           width: 90%;
+           @include flexContent(column,center,center,0,5vh);
+        }
         figure {
-            padding: 5vh;
-            width: 90%;
-            border: 1px solid $defaultGray;
-            @include flexContent(column, center, center, 0, 2vh);
+           padding: 5%;
+           @include flexContent(column,center,center,0,2vh);
+           width: 90%;
+           border: 1px solid $defaultGray;
         }
-
-        img {
-            width: 30vh;
-            height: 30vh;
-        }
-
         figcaption {
-            @include flexColumn;
-            row-gap: 2vh;
-            line-height: 1.5;
-            color: $defaultColor;
+           @include flexColumn;
+           row-gap: 2vh;
+           line-height: 1.5;
+           color: $defaultColor;
+           width: 85%;
         }
-    }
-
-    
-    #vision, #mission {
+        img {
+           width: 30vh;
+           height: 30vh;
+        }
+        h4 {
+           color: $defaultBlue;
+        }
+     }
+     #vision, #mission {
         border: 1px solid $defaultColor;
         @include flexColumn;
         row-gap: 4vh;
         padding: 5%;
         width: 90%;
-    }
-
-    #mission {
+     }
+     #mission {
         display: none;
-    }
-
-    .company {
+     }
+     .company {
         @include flexColumn;
         align-items: center;
         row-gap: 5vh;
-
+        
         img {
-            width: 100%;
+           width: 100%;
         }
-
         > section {
-            width: 90%;
-            @include flexColumn;
-            align-items: center;
+           width: 90%;
+           @include flexColumn;
+           align-items: center;
         }
-
         > figure {
-            @include flexColumn;
-            width: 80%;
-            row-gap: 3vh;
+           @include flexColumn;
+           align-items: center;
+           row-gap: 3vh;
         }
-
         figcaption {
-            width: 80%;
-            @include flexContent(column, center, center, 0, 5vh);
-            line-height: 1.5;
+           @include flexContent(column,center,center,0,5vh);
+           width: 80%;
+           line-height: 1.5;
         }
-
         h2 {
-            font-size: $defaultH2SizeMob;
-            font-weight: 400;
-            color: $defaultColor;
+           font-size: $defaultH2SizeMob;
+           font-weight: 400;
+           color: $defaultColor;
         }
-
         aside {
-            width: 100%;
-            display: flex;
-            justify-content: right;
+           width: 100%;
+           display: flex;
+           justify-content: right;
         }
-
         a {
-            border: 1px solid $defaultColor;
-            font-weight: 400;
-            width: 40%;
-            padding: 2%;
-            font-size: 20px;
-            color: $defaultColor;
-            text-decoration: none;
-            text-align: center;
+           border: 1px solid $defaultColor;
+           font-weight: 400;
+           width: 40%;
+           padding: 2%;
+           font-size: 20px;
+           text-decoration: none;
+           text-align: center;
+           color: $defaultColor;
         }
-
         > section {
-
-            > article {
-                display: flex;
-                width: 100%;
-            }
-
-            p {
-                line-height: 1.5;
-                width: 90%;
-            }
+           > article {
+              display: flex;
+              width: 100%;
+           }
+           p {
+              line-height: 1.5;
+              width: 90%;
+           }
         }
-
         article > a {
-            width: 50%;
-            border-bottom: 0px;
+           width: 100%;
+           border-bottom: 0px;
         }
-
         article > a:last-child {
-            background-color: gainsboro;
-            transition: .4s;
+           background-color: gainsboro;
+           transition: .4s;
         }
-
-        article > a:last-child:hover {
-            background-color: transparent;
-            #vision {
-                display: none;
-            }
-
-            #mission {
-                display: flex;
-            }
-        }
-    }
-
-    .contact {
+     }
+     .contact {
         @include flexColumn;
-
+        row-gap: 5vh;
         > section,
         form {
-            @include flexColumn;
+           @include flexColumn;
         }
-
         > section {
-            align-items: center;
-            row-gap: 2vh;
+           row-gap: 2vh;
+           align-items: center;
         }
-
         form {
-            width: 96%;
-            row-gap: 2vh;
+           width: 90%;
+           row-gap: 2vh;
         }
-
         h4 {
-            width: 90%;
-            text-align: right;
-            font-size: $defaultH2SizeMob;
-            font-weight: 300;
-            color: $defaultColor;
+           width: 90%;
+           text-align: right;
+           font-size: $defaultH2SizeMob;
+           font-weight: 300;
+           color: $defaultColor;
         }
-
         aside {
-            display: flex;
-            justify-content: right;
+           display: flex;
+           justify-content: right;
         }
-
-        input, textarea {
-            border: 1px solid $defaultGray;
-            padding: 1%;
+        > figure, figcaption {
+           @include flexColumn;
+           align-items: center;
         }
-    
-        textarea {
-            height: 30vh;
-            resize: none;
-        }
-
-        [type="submit"] {
-            font-weight: 400;
-            width: 40%;
-            padding: 2%;
-            background-color: white;
-            font-size: 24px;
-            color: $defaultColor;
-        }
-        
         > figure {
-            row-gap: 3vh;
+           row-gap: 3vh;
         }
-
-        figure, figcaption {
-            @include flexColumn;
-            align-items: center;
-        }
-
         figcaption {
-            width: 90%;
-            color: $defaultColor;
-            line-height: 1.5;
+           width: 90%;
+           color: $defaultColor;
+           line-height: 1.5;
         }
-
         img {
-            width: 90%;
-    }
-    
-    
-    }
-
-    footer {
+           width: 90%;
+        }
+  
+     }
+  
+  
+     footer {
+        padding: 5%;
         width: 90%;
         @include flexColumn;
         row-gap: 1vh;
         align-items: center;
         color: $defaultColor;
-        padding: 5%;
-
+  
         a {
-            text-decoration: none;
-            color: $defaultColor;
-            background-color: gainsboro;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 5vh;
-            height: 5vh;
+           text-decoration: none;
+           color: $defaultColor;
+           background-color: gainsboro;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           width: 5vh;
+           height: 5vh;
         }
-    }
+     }
 
 }

@@ -31,14 +31,21 @@ details {
 @media (min-width: 200px) {
   nav {
     padding-top: 10%;
-    padding-bottom: 10%;
+    padding-bottom: 15%;
   }
   nav > section {
+    background-color: white;
+    width: 100%;
     padding-top: 1%;
     padding-bottom: 1%;
     height: 5vh;
     border-top: 1px solid #909090;
     border-bottom: 1px solid #909090;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    position: fixed;
+    z-index: 6;
   }
   nav > article {
     display: flex;
@@ -58,6 +65,33 @@ details {
     width: 40%;
     font-weight: 300;
     font-size: 50px;
+  }
+  details {
+    width: 100%;
+    text-align: center;
+    position: relative;
+  }
+  details > ul {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: white;
+    z-index: 5;
+  }
+  details li {
+    display: flex;
+    width: 100%;
+  }
+  details a {
+    text-decoration: none;
+    color: #5F5F5F;
+    width: 100%;
+    padding: 2%;
+    text-align: center;
+  }
+  summary {
+    font-size: 24px;
   }
   header {
     position: relative;
@@ -91,21 +125,28 @@ details {
     font-weight: 300;
     font-size: 50px;
   }
-  video {
-    -o-object-fit: cover;
-       object-fit: cover;
-    -o-object-position: center;
-       object-position: center;
-    position: absolute;
-    width: 100%;
-    height: 100%;
+  input, textarea {
+    border: 1px solid #909090;
+    padding: 3%;
+  }
+  textarea {
+    resize: none;
+    height: 30vh;
+  }
+  [type=submit] {
+    font-weight: 400;
+    width: 40%;
+    padding: 2%;
+    background-color: white;
+    font-size: 24px;
+    color: #5F5F5F;
   }
   .features {
     color: #5F5F5F;
     padding: 5%;
-    row-gap: 5vh;
     padding-top: 5vh;
     padding-bottom: 5vh;
+    row-gap: 5vh;
   }
   .features > section {
     display: flex;
@@ -140,15 +181,18 @@ details {
     align-items: center;
     -moz-column-gap: 0;
          column-gap: 0;
-    row-gap: 5vh;
+    row-gap: 7vh;
   }
   .activities > article {
     height: 20vh;
     width: 90%;
-    background-image: url("/img/pic5.jpg");
+    background-image: url("/img/pic-04.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+  }
+  .activities h2 {
+    font-size: 30px;
   }
   .activities aside {
     width: 100%;
@@ -168,15 +212,10 @@ details {
     align-items: center;
     -moz-column-gap: 0;
          column-gap: 0;
-    row-gap: 3vh;
-  }
-  .activities h2 {
-    font-size: 30px;
+    row-gap: 5vh;
   }
   .activities figure {
-    padding: 5vh;
-    width: 90%;
-    border: 1px solid #909090;
+    padding: 5%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -184,10 +223,8 @@ details {
     -moz-column-gap: 0;
          column-gap: 0;
     row-gap: 2vh;
-  }
-  .activities img {
-    width: 30vh;
-    height: 30vh;
+    width: 90%;
+    border: 1px solid #909090;
   }
   .activities figcaption {
     display: flex;
@@ -195,6 +232,14 @@ details {
     row-gap: 2vh;
     line-height: 1.5;
     color: #5F5F5F;
+    width: 85%;
+  }
+  .activities img {
+    width: 30vh;
+    height: 30vh;
+  }
+  .activities h4 {
+    color: #108AC1;
   }
   #vision, #mission {
     border: 1px solid #5F5F5F;
@@ -225,11 +270,10 @@ details {
   .company > figure {
     display: flex;
     flex-direction: column;
-    width: 80%;
+    align-items: center;
     row-gap: 3vh;
   }
   .company figcaption {
-    width: 80%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -237,6 +281,7 @@ details {
     -moz-column-gap: 0;
          column-gap: 0;
     row-gap: 5vh;
+    width: 80%;
     line-height: 1.5;
   }
   .company h2 {
@@ -255,9 +300,9 @@ details {
     width: 40%;
     padding: 2%;
     font-size: 20px;
-    color: #5F5F5F;
     text-decoration: none;
     text-align: center;
+    color: #5F5F5F;
   }
   .company > section > article {
     display: flex;
@@ -268,25 +313,17 @@ details {
     width: 90%;
   }
   .company article > a {
-    width: 50%;
+    width: 100%;
     border-bottom: 0px;
   }
   .company article > a:last-child {
     background-color: gainsboro;
     transition: 0.4s;
   }
-  .company article > a:last-child:hover {
-    background-color: transparent;
-  }
-  .company article > a:last-child:hover #vision {
-    display: none;
-  }
-  .company article > a:last-child:hover #mission {
-    display: flex;
-  }
   .contact {
     display: flex;
     flex-direction: column;
+    row-gap: 5vh;
   }
   .contact > section,
 .contact form {
@@ -294,11 +331,11 @@ details {
     flex-direction: column;
   }
   .contact > section {
-    align-items: center;
     row-gap: 2vh;
+    align-items: center;
   }
   .contact form {
-    width: 96%;
+    width: 90%;
     row-gap: 2vh;
   }
   .contact h4 {
@@ -312,29 +349,13 @@ details {
     display: flex;
     justify-content: right;
   }
-  .contact input, .contact textarea {
-    border: 1px solid #909090;
-    padding: 1%;
-  }
-  .contact textarea {
-    height: 30vh;
-    resize: none;
-  }
-  .contact [type=submit] {
-    font-weight: 400;
-    width: 40%;
-    padding: 2%;
-    background-color: white;
-    font-size: 24px;
-    color: #5F5F5F;
-  }
-  .contact > figure {
-    row-gap: 3vh;
-  }
-  .contact figure, .contact figcaption {
+  .contact > figure, .contact figcaption {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+  .contact > figure {
+    row-gap: 3vh;
   }
   .contact figcaption {
     width: 90%;
@@ -345,22 +366,42 @@ details {
     width: 90%;
   }
   footer {
+    padding: 5%;
     width: 90%;
     display: flex;
     flex-direction: column;
     row-gap: 1vh;
     align-items: center;
     color: #5F5F5F;
-    padding: 5%;
   }
   footer a {
     text-decoration: none;
     color: #5F5F5F;
     background-color: gainsboro;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     width: 5vh;
     height: 5vh;
+  }
+}
+@media (min-width: 600px) {
+  details {
+    display: none;
+  }
+  nav ul {
+    display: flex;
+    justify-content: center;
+    -moz-column-gap: 5vh;
+         column-gap: 5vh;
+    width: 100%;
+  }
+  nav li {
+    display: flex;
+  }
+  nav a {
+    padding: 5%;
+    text-decoration: none;
+    color: #5F5F5F;
   }
 }/*# sourceMappingURL=style.css.map */
