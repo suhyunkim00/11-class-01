@@ -1,3 +1,52 @@
-@media (min-width:$mediaSizeTab) {
+@media (min-width: 600px) {
 
+    details {
+        display: none;
+    }
+    
+    nav {
+        padding-top: 0;
+        padding-bottom: 5vh;
+        display: flex;
+        height: 20vh;
+        row-gap: 4vh;
+
+        > article {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+        }
+
+        > section {
+            position: fixed;
+        }
+
+        ul {    
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            column-gap: 2vh;
+        }
+
+        li {
+            width: 10%;
+            display: flex;
+        }
+
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1%;
+            height: 5vh;
+            width: 100%;
+            transition: .4s;
+            text-align: center;
+            color: $defaultColor;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+    }
 }
