@@ -384,24 +384,4 @@ details {
     width: 5vh;
     height: 5vh;
   }
-}
-@media (min-width: 600px) {
-  details {
-    display: none;
-  }
-  nav ul {
-    display: flex;
-    justify-content: center;
-    -moz-column-gap: 5vh;
-         column-gap: 5vh;
-    width: 100%;
-  }
-  nav li {
-    display: flex;
-  }
-  nav a {
-    padding: 5%;
-    text-decoration: none;
-    color: #5F5F5F;
-  }
 }/*# sourceMappingURL=style.css.map */
