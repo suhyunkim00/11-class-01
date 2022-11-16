@@ -108,10 +108,240 @@
         }
     }
 
+    .activities {
+        @include flexContent(column, center, center, 0, 5vh);
+    
+        > article {
+            height: 20vh;
+            width: 90%;
+            @include bgImage("/img/pic5.jpg");
+        }
 
+        aside {
+            width: 100%;
+            height: 100%;
+            @include flexText;
+            color: white;
+            background-color: rgba(30, 30, 30, .8);
+        }
 
-    img {
-        width: 10vh;
-        height: 10vh;
+        > section {
+            width: 90%;
+            @include flexContent(column, center, center, 0, 3vh);
+        }
+
+        h2 {
+            font-size: $defaultH2SizeMob;
+        }
+
+        figure {
+            padding: 5vh;
+            width: 90%;
+            border: 1px solid $defaultGray;
+            @include flexContent(column, center, center, 0, 2vh);
+        }
+
+        img {
+            width: 30vh;
+            height: 30vh;
+        }
+
+        figcaption {
+            @include flexColumn;
+            row-gap: 2vh;
+            line-height: 1.5;
+            color: $defaultColor;
+        }
     }
+
+    
+    #vision, #mission {
+        border: 1px solid $defaultColor;
+        @include flexColumn;
+        row-gap: 4vh;
+        padding: 5%;
+        width: 90%;
+    }
+
+    #mission {
+        display: none;
+    }
+
+    .company {
+        @include flexColumn;
+        align-items: center;
+        row-gap: 5vh;
+
+        img {
+            width: 100%;
+        }
+
+        > section {
+            width: 90%;
+            @include flexColumn;
+            align-items: center;
+        }
+
+        > figure {
+            @include flexColumn;
+            width: 80%;
+            row-gap: 3vh;
+        }
+
+        figcaption {
+            width: 80%;
+            @include flexContent(column, center, center, 0, 5vh);
+            line-height: 1.5;
+        }
+
+        h2 {
+            font-size: $defaultH2SizeMob;
+            font-weight: 400;
+            color: $defaultColor;
+        }
+
+        aside {
+            width: 100%;
+            display: flex;
+            justify-content: right;
+        }
+
+        a {
+            border: 1px solid $defaultColor;
+            font-weight: 400;
+            width: 40%;
+            padding: 2%;
+            font-size: 20px;
+            color: $defaultColor;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        > section {
+
+            > article {
+                display: flex;
+                width: 100%;
+            }
+
+            p {
+                line-height: 1.5;
+                width: 90%;
+            }
+        }
+
+        article > a {
+            width: 50%;
+            border-bottom: 0px;
+        }
+
+        article > a:last-child {
+            background-color: gainsboro;
+            transition: .4s;
+        }
+
+        article > a:last-child:hover {
+            background-color: transparent;
+            #vision {
+                display: none;
+            }
+
+            #mission {
+                display: flex;
+            }
+        }
+    }
+
+    .contact {
+        @include flexColumn;
+
+        > section,
+        form {
+            @include flexColumn;
+        }
+
+        > section {
+            align-items: center;
+            row-gap: 2vh;
+        }
+
+        form {
+            width: 96%;
+            row-gap: 2vh;
+        }
+
+        h4 {
+            width: 90%;
+            text-align: right;
+            font-size: $defaultH2SizeMob;
+            font-weight: 300;
+            color: $defaultColor;
+        }
+
+        aside {
+            display: flex;
+            justify-content: right;
+        }
+
+        input, textarea {
+            border: 1px solid $defaultGray;
+            padding: 1%;
+        }
+    
+        textarea {
+            height: 30vh;
+            resize: none;
+        }
+
+        [type="submit"] {
+            font-weight: 400;
+            width: 40%;
+            padding: 2%;
+            background-color: white;
+            font-size: 24px;
+            color: $defaultColor;
+        }
+        
+        > figure {
+            row-gap: 3vh;
+        }
+
+        figure, figcaption {
+            @include flexColumn;
+            align-items: center;
+        }
+
+        figcaption {
+            width: 90%;
+            color: $defaultColor;
+            line-height: 1.5;
+        }
+
+        img {
+            width: 90%;
+    }
+    
+    
+    }
+
+    footer {
+        width: 90%;
+        @include flexColumn;
+        row-gap: 1vh;
+        align-items: center;
+        color: $defaultColor;
+        padding: 5%;
+
+        a {
+            text-decoration: none;
+            color: $defaultColor;
+            background-color: gainsboro;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 5vh;
+            height: 5vh;
+        }
+    }
+
 }
