@@ -49,4 +49,110 @@
             text-transform: uppercase;
         }
     }
+
+    .features {
+        flex-direction: row;
+        column-gap: 5vh;
+    }
+
+    .activities {
+        
+        > article {
+            background-position: center;
+        }
+
+        > section {
+            width: unset;
+        }
+
+        figure {
+            flex-direction: row;
+            column-gap: 3vh;
+            padding: 3%;
+        }
+
+        img {
+            width: 15vh;
+            height: 15vh;
+        }
+        
+    }
+
+    .company {
+        img {
+            width: 50%;
+        }
+
+        figcaption {
+            row-gap: 2vh;
+            align-items: flex-start;
+
+            a {
+                width: 25%;
+                font-size: 18px;
+                transition: .4s;
+
+                &:hover {
+                    background-color: $defaultGray;
+                    color: white;
+                }
+            }
+        }
+
+        > section {
+
+            > article {
+                width: 90%;
+            }
+        }
+    }
+
+    .contact {
+
+        padding-right: 10%;
+
+        > section {
+            align-items: flex-end;
+        }
+
+        > figure {
+            align-items: flex-end;
+        }
+
+        form {
+            width: 50%;
+        }
+
+        figcaption {
+            width: 50vh;
+        }
+
+        img {
+            width: 50vh;
+            height: 30vh;
+            object-fit: cover;
+            object-position: top;
+        }
+
+        [type="submit"] {
+            transition: .4s;
+
+            &:hover {
+                background-color: $defaultGray;
+                color: white;
+            }
+        }
+    }
+
+    .faq {
+        width: 100%;
+        align-items: center;
+
+        > section {
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            row-gap: 4vh;
+        }
+    }
 }

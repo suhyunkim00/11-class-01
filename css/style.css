@@ -20,6 +20,21 @@ main > section {
   padding-bottom: 5vh;
 }
 
+video {
+  position: absolute;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+  height: 100%;
+  width: 100%;
+}
+
+ul, p {
+  padding: 0;
+  margin: 0;
+}
+
 details {
   display: none;
 }
@@ -362,5 +377,131 @@ details {
     justify-content: center;
     width: 5vh;
     height: 5vh;
+  }
+}
+@media (min-width: 600px) {
+  details {
+    display: none;
+  }
+  nav {
+    padding-top: 0;
+    padding-bottom: 5vh;
+    display: flex;
+    height: 20vh;
+    row-gap: 4vh;
+  }
+  nav > article {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  nav > section {
+    position: fixed;
+  }
+  nav ul {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    -moz-column-gap: 2vh;
+         column-gap: 2vh;
+  }
+  nav li {
+    width: 10%;
+    display: flex;
+  }
+  nav a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1%;
+    height: 5vh;
+    width: 100%;
+    transition: 0.4s;
+    text-align: center;
+    color: #5F5F5F;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  .features {
+    flex-direction: row;
+    -moz-column-gap: 5vh;
+         column-gap: 5vh;
+  }
+  .activities > article {
+    background-position: center;
+  }
+  .activities > section {
+    width: unset;
+  }
+  .activities figure {
+    flex-direction: row;
+    -moz-column-gap: 3vh;
+         column-gap: 3vh;
+    padding: 3%;
+  }
+  .activities img {
+    width: 15vh;
+    height: 15vh;
+  }
+  .company img {
+    width: 50%;
+  }
+  .company figcaption {
+    row-gap: 2vh;
+    align-items: flex-start;
+  }
+  .company figcaption a {
+    width: 25%;
+    font-size: 18px;
+    transition: 0.4s;
+  }
+  .company figcaption a:hover {
+    background-color: #909090;
+    color: white;
+  }
+  .company > section > article {
+    width: 90%;
+  }
+  .contact {
+    padding-right: 10%;
+  }
+  .contact > section {
+    align-items: flex-end;
+  }
+  .contact > figure {
+    align-items: flex-end;
+  }
+  .contact form {
+    width: 50%;
+  }
+  .contact figcaption {
+    width: 50vh;
+  }
+  .contact img {
+    width: 50vh;
+    height: 30vh;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: top;
+       object-position: top;
+  }
+  .contact [type=submit] {
+    transition: 0.4s;
+  }
+  .contact [type=submit]:hover {
+    background-color: #909090;
+    color: white;
+  }
+  .faq {
+    width: 100%;
+    align-items: center;
+  }
+  .faq > section {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 4vh;
   }
 }/*# sourceMappingURL=style.css.map */

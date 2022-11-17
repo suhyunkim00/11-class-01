@@ -18,6 +18,23 @@ main > section {
     padding-bottom: 5vh;
 }
 
+video {
+    position: absolute;
+    object-fit: cover;
+    object-position: top;
+    height: 100%;
+    width: 100%;
+}
+
+ul, p {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+
+}
+
 details {
     display: none;
 }
